@@ -14,7 +14,7 @@ _in.onkeypress = function() {
         });
         msg = msg.toUpperCase();
         for (var i = 0, l = msg.length; i < l; i++) {
-            for (var j = 0, m = ceasar.length; j++) {
+            for (var j = 0, m = ceasar.length; j < m; j++) {
                 if (msg[i] === ceasar[j]) {
                     msg[i] = alphabet[j];
                     break;
