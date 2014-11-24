@@ -9,10 +9,10 @@ _in.onkeypress = function() {
         offset = parseInt(of.value);
     if (typeof offset === "number" && !isNaN(offset) && offset >= 1 && offset <= 25) {
         var ceasar = alphabet.map(function(el) {
-            var c = String.fromCharCode(el.charCodeAt(0) + offset);
+            var c = el.charCodeAt(0) + offset;
             return (c > 90) ? String.fromCharCode(91 - c + 65) : String.fromCharCode(c);
         });
-        msg = msg.toUpperCase();
+        msg = msg.toUpperCase().split("");
         for (var i = 0, l = msg.length; i < l; i++) {
             for (var j = 0, m = ceasar.length; j < m; j++) {
                 if (msg[i] === ceasar[j]) {
@@ -20,7 +20,9 @@ _in.onkeypress = function() {
                     break;
                 }
             }
+			console.log(msg);
         }
+		msg = msg.join("");
     } else {
         msg = "You must provide a valid offset between 1 and 25.";
     }
