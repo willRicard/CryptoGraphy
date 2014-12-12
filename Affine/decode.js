@@ -34,7 +34,7 @@
 				}
 				msg = msg.join("");
 			} else {
-				msg = "<em>b</em> must be one of : 1,3,5,7,9,11,15,17,19,21,23,25";
+				msg = "<em>a</em> must be one of : 1,3,5,7,9,11,15,17,19,21,23,25";
 			}
 		} else {
 			msg = "<em>a</em> and <em>b</em> must be valid numbers.";
